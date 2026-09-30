@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rohan Gupta | AI & Software Developer</title>
+<meta name="description" content="Portfolio of Rohan Gupta — a software developer focused on web development, Python, AI/ML and modern digital solutions.">
+<meta property="og:title" content="Rohan Gupta | AI & Software Developer">
+<meta property="og:description" content="Web development, Python, AI/ML and modern digital solutions.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090c;--panel:#0e1217;--line:#1c2530;--tx:#e6edf3;--mut:#8a98a8;--a:#22d3ee;--b:#3b82f6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="dark"]){}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f7fa;--panel:#fff;--line:#d8e1ea;--tx:#0b1620;--mut:#5a6b7c;--a:#0891b2;--b:#2563eb}}
+:root[data-theme="light"]{--bg:#f4f7fa;--panel:#fff;--line:#d8e1ea;--tx:#0b1620;--mut:#5a6b7c;--a:#0891b2;--b:#2563eb}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:90px 0}
+h1,h2,h3{line-height:1.1;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.5vw,50px);margin-bottom:14px}
+.sub{color:var(--mut);max-width:60ch;margin:0 0 40px}
+.g{background:linear-gradient(100deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:700}.logo span{color:var(--a)}
+.links{display:flex;gap:26px;font-size:14px;color:var(--mut)}
+.links a:hover{color:var(--tx)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--tx);border-radius:8px;width:44px;height:44px;font-size:20px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border-radius:12px;font-weight:500;border:1px solid var(--line);cursor:pointer;background:transparent;color:var(--tx);font:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:linear-gradient(100deg,var(--a),var(--b));border:0;color:#04121a;font-weight:700}
+.btn.p:hover{box-shadow:0 8px 30px -8px var(--a)}
+#hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 60px;position:relative}
+#grid{position:absolute;inset:0;z-index:-1;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);animation:pan 20s linear infinite}
+@keyframes pan{to{background-position:56px 56px}}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{display:inline-block;font-size:12px;letter-spacing:.14em;color:var(--a);border:1px solid var(--line);border-radius:99px;padding:6px 14px;margin-bottom:24px}
+h1{font-size:clamp(40px,6.4vw,84px)}
+.lead{color:var(--mut);max-width:52ch;margin:24px 0 32px;font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta .lnk{color:var(--a);padding:0 10px}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 0 60px -20px var(--a);transition:transform .15s;will-change:transform}
+.term .bar{display:flex;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.term .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.term pre{margin:0;padding:20px;font-size:13px;line-height:1.8;overflow-x:auto;min-height:250px}
+.k{color:var(--a)}.s{color:#a3e635}.c{color:var(--mut)}
+.cur{display:inline-block;width:8px;height:15px;background:var(--a);vertical-align:middle;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.cards{display:grid;gap:16px}
+.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}.c2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--a) 50%,var(--line));box-shadow:0 12px 40px -18px var(--a)}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{color:var(--mut);margin:0}
+.stats{margin-top:16px}.stat{border-left:2px solid var(--a);padding-left:14px}.stat b{font-size:28px;display:block}.stat span{color:var(--mut);font-size:13px}
+.tag{display:inline-block;font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:2px 9px;margin:0 6px 6px 0}
+.stack h3{font-size:14px;color:var(--a);margin-bottom:14px}
+.proj{display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:340px}
+.proj .cat{font-size:12px;color:var(--a)}
+.proj ul{margin:10px 0 0;padding-left:18px;color:var(--mut);font-size:14px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.btn.s2{min-height:40px;padding:0 16px;font-size:14px}
+.lvl{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pill{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 12px;color:var(--mut);white-space:nowrap}
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.tl div{padding:0 0 30px 26px;position:relative}
+.tl div::before{content:"";position:absolute;left:-6px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--a);box-shadow:0 0 12px var(--a)}
+.tl small{color:var(--mut)}
+.proc{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;position:relative}
+.proc::before{content:"";position:absolute;top:22px;left:4%;right:4%;height:1px;background:linear-gradient(90deg,var(--a),var(--b))}
+.proc div{position:relative}
+.num{width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--a);display:grid;place-items:center;color:var(--a);box-shadow:0 0 18px -4px var(--a);margin-bottom:14px;font-size:14px}
+.proc p{color:var(--mut);font-size:14px;margin:4px 0 0}
+.quote{font-size:clamp(22px,3vw,34px);max-width:26ch}
+form{display:grid;gap:12px}
+input,textarea{width:100%;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:13px 14px;font:inherit}
+input:focus,textarea:focus{border-color:var(--a);outline:none}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+footer nav,footer .f{position:static;display:flex;gap:16px;flex-wrap:wrap;border:0;background:none;backdrop-filter:none;padding:0}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+#cs{position:fixed;inset:0;z-index:100;background:var(--bg);overflow:auto;padding:80px 22px 60px;transform:translateY(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);visibility:hidden}
+#cs.open{transform:none;visibility:visible}
+#cs .in{max-width:760px;margin:0 auto}
+#cs h4{color:var(--a);margin:28px 0 6px;font-size:14px;letter-spacing:.06em}
+#cs p{color:var(--mut);margin:0}
+.shot{height:160px;border:1px dashed var(--line);border-radius:12px;display:grid;place-items:center;color:var(--mut);font-size:13px}
+@media (max-width:900px){.hero,.c3,.c4,.c2{grid-template-columns:1fr}.c4.sm{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr;gap:20px}.proc::before{display:none}.proc div{display:grid;grid-template-columns:56px 1fr;align-items:start}.proc .num{grid-row:span 2}.links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 22px}.links.open{display:flex}.links a{padding:14px 0;font-size:16px}.burger{display:block}section{padding:64px 0}#hero{min-height:auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap"><a class="logo" href="#home">Rohan Gupta<span>.</span></a>
+<div class="links" id="links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div>
+<button class="burger" id="bg" aria-label="Toggle menu" aria-expanded="false">☰</button></div></nav>
+
+<main>
+<section id="hero"><div id="grid"></div><div class="wrap hero" id="home">
+<div><span class="badge mono">AI • SOFTWARE • WEB DEVELOPMENT</span>
+<h1>Building <span class="g">Intelligent</span><br>Digital <span class="g">Experiences.</span></h1>
+<p class="lead">I design and develop modern web applications, intelligent software solutions and AI-powered digital experiences focused on solving real-world problems.</p>
+<div class="cta"><a class="btn p" href="#projects">View My Work</a><a class="btn" href="#" id="rs">Download Resume</a><a class="lnk" href="#contact">Let's Connect →</a></div></div>
+<div class="term mono" id="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c"># profile.py</span>
+<span class="k">class</span> Developer:
+    name  = <span class="s">"Rohan Gupta"</span>
+    base  = <span class="s">"Jamshedpur, India"</span>
+    focus = [<span class="s">"Web"</span>, <span class="s">"Python"</span>, <span class="s">"AI/ML"</span>]
+
+    <span class="k">def</span> build(self, problem):
+        <span class="k">return</span> <span class="s">"a practical solution"</span>
+
+<span id="tt"></span><span class="cur"></span></pre></div>
+</div></section>
+
+<section id="about"><div class="wrap rv">
+<h2>Technology with a <span class="g">Purpose.</span></h2>
+<p class="sub">I'm a passionate developer focused on building practical digital solutions using modern web technologies, programming and AI.<br><br>I enjoy turning ideas into functional products — from responsive websites and dashboards to intelligent applications that solve real-world problems.</p>
+<div class="cards c3"><div class="card"><h3>Problem solving</h3><p>Breaking messy problems into small, testable steps.</p></div><div class="card"><h3>Continuous learning</h3><p>Picking up new tools by building with them.</p></div><div class="card"><h3>Building real products</h3><p>Shipping things people can actually use.</p></div></div>
+<div class="cards c4 sm stats"><div class="stat"><b>[00]</b><span>Projects completed</span></div><div class="stat"><b>[00]</b><span>Technologies</span></div><div class="stat"><b>[00]</b><span>Certifications</span></div><div class="stat"><b>[000]</b><span>Learning hours</span></div></div>
+</div></section>
+
+<section id="stack"><div class="wrap rv"><h2>Technology stack</h2><p class="sub">The tools I build with, grouped by what they do.</p>
+<div class="cards c3 stack">
+<div class="card"><h3>Frontend</h3><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Next.js</span></div>
+<div class="card"><h3>Backend</h3><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Node.js</span><span class="tag">REST APIs</span></div>
+<div class="card"><h3>AI / ML</h3><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Computer Vision</span><span class="tag">AI APIs</span></div>
+<div class="card"><h3>Database</h3><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span></div>
+<div class="card"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Figma</span></div>
+<div class="card"><h3>Cloud / Deployment</h3><span class="tag">Vercel</span><span class="tag">GitHub</span><span class="tag">Cloud platforms</span></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap rv"><h2>Selected <span class="g">Projects</span></h2><p class="sub">Real projects. Practical solutions. Continuous experimentation.</p>
+<div class="cards c2" id="pl"></div></div></section>
+
+<section id="skills"><div class="wrap rv"><h2>Skills</h2><p class="sub">Levels are placeholders — set each to Learning, Working Knowledge, Intermediate or Advanced.</p>
+<div class="cards c3" id="sk"></div>
+<h3 style="margin:40px 0 14px;font-size:18px">Soft skills</h3>
+<div><span class="tag">Problem solving</span><span class="tag">Communication</span><span class="tag">Teamwork</span><span class="tag">Time management</span><span class="tag">Adaptability</span><span class="tag">Continuous learning</span></div>
+</div></section>
+
+<section id="journey"><div class="wrap rv"><h2>Learning &amp; development journey</h2><p class="sub">Education, certifications and hands-on learning. Add formal experience here only if you have it.</p>
+<div class="tl"><div><b>Diploma in Computer Science Engineering</b><br><small>Arka Jain University, Jamshedpur · [Year]</small></div><div><b>Class 10</b><br><small>DAV NIT School, Jamshedpur · 2025</small></div></div>
+<h3 style="margin:20px 0 14px">Certifications</h3>
+<div class="cards c2" id="ce"></div></div></section>
+
+<section id="build"><div class="wrap rv"><h2>What I can build</h2><p class="sub"> </p>
+<div class="cards c4"><div class="card"><h3>Web development</h3><p>Responsive, modern websites for businesses, portfolios and organizations.</p></div><div class="card"><h3>Frontend development</h3><p>Clean, responsive and interactive user interfaces.</p></div><div class="card"><h3>Python development</h3><p>Python applications, automation and backend systems.</p></div><div class="card"><h3>AI / ML solutions</h3><p>Practical AI and machine learning applications for real-world problems.</p></div></div>
+</div></section>
+
+<section id="process"><div class="wrap rv"><h2>How I work</h2><p class="sub">Six steps from problem to launch.</p>
+<div class="proc mono"><div><span class="num">01</span><b>Discover</b><p>Understand the problem.</p></div><div><span class="num">02</span><b>Plan</b><p>Define the solution and architecture.</p></div><div><span class="num">03</span><b>Design</b><p>Create the user experience.</p></div><div><span class="num">04</span><b>Develop</b><p>Build the product.</p></div><div><span class="num">05</span><b>Test</b><p>Validate functionality and usability.</p></div><div><span class="num">06</span><b>Deploy</b><p>Launch and improve.</p></div></div>
+</div></section>
+
+<section id="approach"><div class="wrap rv"><h2 class="quote">Curious by nature. Practical by design.</h2><p class="sub" style="margin-top:20px">I believe good technology should not only look impressive — it should solve a real problem.<br><br>My approach combines clean design, practical development and continuous learning to create digital experiences that are useful, reliable and easy to use.</p></div></section>
+
+<section id="code"><div class="wrap rv"><h2>Open source &amp; code</h2>
+<p class="sub">Public repositories from github.com/RohanGupta672.</p><div class="cards c3" id="gh"></div><div style="margin-top:24px"><a class="btn p" href="https://github.com/RohanGupta672">Explore GitHub →</a></div>
+</div></section>
+
+<section id="contact"><div class="wrap rv"><h2>Have an idea?<br><span class="g">Let's build it.</span></h2>
+<p class="sub">Whether it's a website, software project or AI-powered solution, I'm always interested in building something meaningful.</p>
+<div class="cards c2"><div>
+<div class="row" style="margin-bottom:24px"><a class="btn p" href="#cf">Start a conversation</a><a class="btn" href="mailto:i.guptarohan@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/rohan-gupta-7648b7381">LinkedIn</a></div>
+<p class="sub" style="margin:0">Jamshedpur, Jharkhand, India<br>i.guptarohan@gmail.com<br>+91 9263427776</p></div>
+<form id="cf">
+<input aria-label="Name" placeholder="Name" required><input aria-label="Email" type="email" placeholder="Email" required><input aria-label="Subject" placeholder="Subject"><textarea aria-label="Message" rows="4" placeholder="Message" required></textarea><button class="btn p">Send message</button><p id="st" class="mono" style="margin:0;font-size:13px;color:var(--mut)" role="status"></p></form></div>
+</div></section>
+<section id="inbox" hidden><div class="wrap"><h2>Inbox</h2><p class="sub">Only you can see this. Messages sent through the contact form appear here live.</p><div class="cards" id="ib"></div></div></section>
+</main>
+
+<footer><div class="wrap"><div><b>Rohan Gupta</b><br>AI • Software • Web development</div>
+<div class="f"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Experience</a><a href="#contact">Contact</a></div>
+<div class="f"><a href="https://github.com/RohanGupta672">GitHub</a><a href="https://www.linkedin.com/in/rohan-gupta-7648b7381">LinkedIn</a><a href="#">Instagram</a><a href="mailto:i.guptarohan@gmail.com">Email</a></div>
+<div style="width:100%">© 2026 Rohan Gupta. All rights reserved.</div></div></footer>
+
+<button class="btn p" id="ib" hidden style="position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60">Inbox</button>
+<div id="ix" hidden style="position:fixed;inset:0;z-index:120;background:var(--bg);overflow:auto;padding:70px 22px"><div style="max-width:760px;margin:0 auto"><button class="btn s2" id="ic">Close</button><h2 style="margin-top:20px">Inbox</h2><div id="il" class="cards"></div></div></div>
+<div id="cs" role="dialog" aria-modal="true" aria-label="Case study"><div class="in"><button class="btn s2" id="cx">← Back to projects</button><div id="cb"></div></div></div>
+
+<script>
+const P=[
+{n:"Study Hub",c:"Education • Web Development",d:"A modern educational platform designed to organize learning resources and provide students with a simple digital learning experience.",f:["Resource organization","Responsive interface","Subject-based navigation","Student-friendly UI"],t:["HTML","CSS","JavaScript"],b:["Live Demo","View Code"]},
+{n:"Weather App",u:"https://github.com/RohanGupta672/Weather-App",c:"Web Application • API Integration",d:"A responsive weather application that displays real-time weather information through an easy-to-use interface.",f:["Weather search","API integration","Temperature information","Responsive design"],t:["HTML","CSS","JavaScript","Weather API"],b:["Live Demo","View Code"]},
+{n:"Veloura Café",c:"Web Development",d:"A premium café website case study covering the full customer journey from landing page to contact.",f:["Landing page","Menu","About","Gallery","Contact","Responsive design"],t:["HTML","CSS","JavaScript"],b:["Live Demo","View Case Study"]},
+{n:"House Price Prediction",c:"Machine Learning • Python • Flask",d:"A machine learning web application that estimates house prices using property characteristics and a trained regression model.",f:["Property input form","Machine learning prediction","Data validation","Prediction dashboard","Model performance metrics"],t:["Python","Flask","Scikit-learn","HTML","CSS","JavaScript"],b:["Live Demo","View Code"]}];
+const $=s=>document.querySelector(s);
+$('#pl').innerHTML=P.map((p,i)=>`<article class="card proj"><div><div class="cat mono">${p.c}</div><h3 style="margin-top:8px">${p.n}</h3><p style="margin-top:10px">${p.d}</p><ul>${p.f.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><div>${p.t.map(x=>`<span class="tag">${x}</span>`).join('')}</div><div class="row" style="margin-top:8px"><a class="btn s2" href="#">${p.b[0]}</a><a class="btn s2" href="${p.u||'#'}">${p.b[1]}</a><button class="btn p s2" data-i="${i}">Case study</button></div></div></article>`).join('');
+$('#gh').innerHTML=[["library-management-system","JavaScript"],["Weather-App","HTML"],["aveline-fashion-store","HTML"],["To-Do-List-","CSS"],["pulse-chat","HTML"],["NEXORA-TECHNOLOGIES","HTML"]].map(([n,l])=>`<a class="card" href="https://github.com/RohanGupta672/${n}"><h3 class="mono" style="font-size:16px">${n}</h3><p><span class="tag">${l}</span></p></a>`).join('');
+$('#sk').innerHTML=["Web Development","Frontend Development","Backend Development","Python Development","JavaScript","Django","API Integration","Database Management","AI/ML Fundamentals","UI/UX Design","Logo Design"].map(s=>`<div class="card lvl"><b>${s}</b><span class="pill mono">[Level]</span></div>`).join('');
+$('#ce').innerHTML=[["TCS iON Career Edge – Young Professional","TCS iON"],["HP LIFE – AI for Beginners","HP LIFE"],["Develop Generative AI Apps in Azure","Microsoft"],["Yuva AI for All","India AI"]].map(([s,o])=>`<div class="card"><h3>${s}</h3><p>${o} · [Completion date]</p><br><a class="btn s2" href="#">View certificate →</a></div>`).join('');
+const cs=$('#cs');
+$('#pl').addEventListener('click',e=>{const i=e.target.dataset.i;if(i==null)return;const p=P[i];
+$('#cb').innerHTML=`<h2 style="margin-top:30px">${p.n}</h2><p class="mono" style="color:var(--a)">${p.c}</p>`+[["Project overview",p.d],["Problem","[Describe the problem this project addresses.]"],["Goal","[Describe what you set out to achieve.]"],["Solution","[Describe your approach.]"],["Development process","[Describe how you planned, built and tested it.]"],["Technology used",p.t.join(", ")],["Key features",p.f.join(" · ")],["Challenges","[Add real challenges you faced.]"],["What I learned","[Add your takeaways.]"]].map(([h,t])=>`<h4>${h}</h4><p>${t}</p>`).join('')+`<h4>Screenshots</h4><div class="shot">[Screenshot placeholder]</div><div class="row" style="margin-top:24px"><a class="btn" href="#">GitHub repository</a><a class="btn p" href="#">Live demo</a></div>`;
+cs.classList.add('open');cs.scrollTop=0;$('#cx').focus()});
+$('#cx').onclick=()=>cs.classList.remove('open');
+addEventListener('keydown',e=>{if(e.key==='Escape')cs.classList.remove('open')});
+$('#bg').onclick=function(){const o=$('#links').classList.toggle('open');this.setAttribute('aria-expanded',o)};
+$('#links').onclick=()=>$('#links').classList.remove('open');
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,T='>>> Developer().build("your idea")',tt=$('#tt');
+if(rm)tt.textContent=T;else{let k=0;(function f(){tt.textContent=T.slice(0,k++);if(k<=T.length)setTimeout(f,60)})()}
+if(!rm){const t=$('#term');addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;t.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`})}
+
+const E="i.guptarohan@gmail.com",st=$('#st');
+$('#cf').addEventListener('submit',async e=>{e.preventDefault();const f=[...e.target.elements].filter(x=>x.tagName!=='BUTTON').map(x=>x.value.trim()),[name,email,subject,message]=f;
+st.textContent='Sending…';let saved=false;
+try{const c=await claude.use('db');if(c){await c.doc('messages/m'+Date.now()+Math.random().toString(36).slice(2,6)).set({name,email,subject,message,at:new Date().toISOString()});saved=true}}catch(_){}
+if(saved){st.textContent='Message sent. Thanks, '+name+' — you will get a reply by email.';e.target.reset()}
+else{st.textContent='Opening your email app to send this message…';location.href='mailto:'+E+'?subject='+encodeURIComponent(subject||'Portfolio enquiry from '+name)+'&body='+encodeURIComponent(message+'\n\n— '+name+' ('+email+')')}});
+$('#rs').addEventListener('click',async e=>{e.preventDefault();
+const t=`ROHAN GUPTA\nAI/ML Enthusiast · Full-Stack Developer · Software Developer\nJamshedpur, Jharkhand, India · ${E}\n\nEDUCATION\nDiploma in Computer Science Engineering — [University name], [Year]\n\nPROJECTS\n${P.map(p=>'- '+p.n+' ('+p.t.join(', ')+'): '+p.d).join('\n')}\n\nSKILLS\nHTML, CSS, JavaScript, React, Next.js, Python, Django, Node.js, REST APIs, Machine Learning, MySQL, MongoDB, PostgreSQL, Git, Figma\n\nCERTIFICATIONS\nTCS iON Career Edge – Young Professional; AI for All; AI for Beginners; Develop Generative AI Apps in Azure\n`;
+try{const d=await claude.use('downloads');if(d){await d.save({filename:'Rohan_Gupta_Resume.txt',data:t});return}}catch(_){}
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain'}));a.download='Rohan_Gupta_Resume.txt';a.click()});
+(async()=>{try{const u=await claude.use('user'),c=await claude.use('db');if(!(u&&c&&u.isOwner()))return;
+$('#inbox').hidden=false;c.collection('messages').onSnapshot(q=>{const d=q.docs.map(x=>x.data()).sort((a,b)=>(b.at||'').localeCompare(a.at||''));
+$('#ib').innerHTML=d.length?d.map(m=>{const h=x=>String(x||'').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));return`<div class="card"><h3>${h(m.subject)||'(no subject)'}</h3><p class="mono" style="font-size:12px">${h(m.name)} · ${h(m.email)} · ${h((m.at||'').slice(0,16).replace('T',' '))}</p><p style="margin-top:10px;color:var(--tx)">${h(m.message)}</p></div>`}).join(''):'<div class="card"><p>No messages yet.</p></div>'})}catch(_){}})();
+(async()=>{
+const st=$('#st'),f=$('#cf'),sb=$('#sb');
+const db=await claude.use("db").catch(()=>null);
+const usr=await claude.use("user").catch(()=>null);
+f.addEventListener('submit',async e=>{e.preventDefault();
+const d=Object.fromEntries(new FormData(f));d.at=Date.now();
+const mail=()=>{location.href='mailto:i.guptarohan@gmail.com?subject='+encodeURIComponent(d.subject||'Portfolio enquiry')+'&body='+encodeURIComponent(d.message+'\n\n— '+d.name+' ('+d.email+')')};
+sb.disabled=true;sb.textContent='Sending…';
+try{if(!db)throw 0;await db.collection('messages').add(d);f.reset();st.textContent='Message sent. Rohan will reply to '+d.email+'.'}
+catch(x){st.textContent='Opening your email app to send this message instead.';mail()}
+sb.disabled=false;sb.textContent='Send message'});
+if(db&&usr&&usr.isOwner()){
+const ib=$('#ib'),ix=$('#ix'),il=$('#il');ib.hidden=false;
+db.collection('messages').orderBy('at','desc').onSnapshot(q=>{
+const docs=q.docs.map(x=>x.data());ib.textContent='Inbox ('+docs.length+')';il.textContent='';
+if(!docs.length){il.textContent='No messages yet.'}
+docs.forEach(m=>{const c=document.createElement('div');c.className='card';
+const h=document.createElement('h3');h.textContent=(m.subject||'(no subject)')+' — '+m.name;
+const p=document.createElement('p');p.textContent=m.message;
+const s=document.createElement('small');s.style.color='var(--a)';s.textContent=m.email+' · '+new Date(m.at).toLocaleString();
+c.append(h,p,document.createElement('br'),s);il.append(c)})});
+ib.onclick=()=>ix.hidden=false;$('#ic').onclick=()=>ix.hidden=true}
+})();
+
+(async()=>{const r=$('#rs'),d=await claude.use("downloads").catch(()=>null);
+r.addEventListener('click',async e=>{e.preventDefault();
+const b=atob("JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9aYXBmRGluZ2JhdHMgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQ29udGVudHMgOSAwIFIgL01lZGlhQm94IFsgMCAwIDU5NS4yNzU2IDg0MS44ODk4IF0gL1BhcmVudCA4IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgOCAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0F1dGhvciAoXChhbm9ueW1vdXNcKSkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MDQyNDE5NTMwNCswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MDQyNDE5NTMwNCswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoXChhbm9ueW1vdXNcKSkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9Db3VudCAxIC9LaWRzIFsgNSAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTgyNgo+PgpzdHJlYW0KR2IhI11EMCtEaiZIODguWW9mMSFlN1pubHBaVnMnJyU0RU1jdXM6UjFIMy9kVFNtW19BMzY0T2ZBRl5cIVNTKVlDLHVTJSJzW2lTPzEjaEFKcS9cUjtTUF5OXnNORjo1OVc5P04kXmYrX2hRUEJLVlE1MXBXMnFzYSJwRChcSi4wWDI1azU5MyJMS3NMZS5aN151RlhLPF44ckZwTWBqdCtwSmlXOyQ3J2ZDKFpjMiJtayxRVENvQUZvXmc+K0c2IkNmQC5dcChxP2BkdCQkT049XygyUUpIP0UsPGVuUD1rS0wnRnAlIidgW2hrdWJCN1IyZ2ojKUVdLj1PITRGYidtQSFKIW8hRjI1b11tKDJAQzEla3FmZDRQLyFQcEU/MzRBUS1xSD5fJS5rSVdPMS9raFgpKztNP2otbnJiRl5BKGRMJ1BfbT43QUdVMEhnVCxiSmRVTDVWXU1hTig1JUVrIUpdKjx0YUM7dGhDblNLMlMyQ0RNViZjSCZMZFRKXmVuSzVRXHNMcXRVZ1gpPFRbXkk/OSozIz1uayQoRlxhJ1szbDxEaXBFc1ohVGg9XTBAZkgxUjpLSXRcI05vO1MuM2NoXkFeYm45Pm1vcDgyQ3FPTCJmKE5qaDUkX0wwQU8kbWNFI1F1P3F0N3VHZUxrRF4qYSROb15zLlMjUWZyJyhVXzVmPXBcSFlpWC0rdE03WC08PyY7clo1Lj4rQHJATjVGUWtQJDBpSyQ4Ozhhc24oJGkhIz5YPUlwbTk7IkE6Y00yM0kob3NzVmQsSzFObWpcWGBqLFVrdWhuQXJXdXIuLTROOlxEOi5RcE9KJiIlIm43IkxyJ1xSRT8iSldvVzJLNFgtJWxXUGZWY2VmbDg9RWwqYCRhOidCY2xwMyVmbC9kbEtxclRzPU1IdF9PPyxHWEpyU0Q0LElGVWZnWmc9T0VdOFBkYSxDX0FyMTJGOyE+LTZpSl11VE86XyhXWkEuUGY5YXFFYlJkbCNQamdjVSJgTVEkTkBEMF9OcFlfYUszPzUlaihWV1kiOkBpRFNmUSE9ISZvYnJrKlY6MWtwPy1gZWBnWGgwIXI7V2tTP11TWHJAODY8ZWxtWDlZZV8kRHU6LT1zS1JSMmddRDNkNGlfPWhZbyoqKmNfVz5DXWxkZzxRSjY1dD40XkRxNy0zKVYiXGFmaWUuUkhidSxdTk9SZ1llclRYO2ZzPGQiSDEyUVRqNys8VFh1LVdxOXVBODhtOTlMQ1M0V3BXZSskVnBxVU1GZCw/QlUrRE5wWUBRRFY3NUkqQ1ldX1cqKGBUbXJ0OiZCJFFlLjFCZVluNjFHQFsqRjBmK1IjbypndFo0TyclLnNSbShoRms5c0hqclpcMTsrKnE5QUdlW1U8OlkyKjUpQ2dzQGo0aSQpLTY5OCJjTC0vbys3JmozQk1ocE9CaTBRSVUuSCInZjFWZzhDTT9OL19jN1dsKE1BTlFyJk1JPjclLDIqRjo4PjhyU3FjUVJqKmpGYzI4XldvYk9aTGovRD9BN08iLTg3S25EXmZILD5ddTIpJGo1J1RLKEw/Jk0uJmsxOFspYWJOY2lNaCtrTFVRSmNLUEJuMWxCai4nLVYxKllOKU9xM1NDPWFYPlhqdVkoNDpXcV9bO0BGdTEiVkVdNlAuak5jdDxeTSovJ1xzaUpxQGhzLUtmQCNOJSdlbGtVQFVoPGtsSGg4JSJmLF0kPE0jJ0dfQ0VNVDNFZF8/UWJTL2tgITtGRittRWArZm9UKDw+W0VsP0o3M1g/RztZalFYW2heWiVKTCtScFo0InQhc11QQjRHU2xRQTxEU2ZgLkFqWm1sWEojN19CN29cSEdTc2hxLjtHLmRtJ05fPTxMVmEnWz4uYjhBWUdKaiQyMjV1ZUNkWkJlUV1zL29YUUhqaj5oJ3AyQT5ibDAtOy5ga2VBOD9jPSpyOlI2L3BTIUNVLVlGYSU2YE9KclkuWSE9RkRVMUYrYDJ0WHImLCRvQ1MlUik7NGU3VG9zSCVlclE8OkNbJktSVk5YcyZAMF9JPWRHXWJKJmE4ZWtSXyckMmpmbGhfWDdDST9hJHJRVCUjTzloLWc9YGhyW1lMOSdYO2s+XVYjY24yQiozRSRqSUI0U2NnamxzYDgwQTBHUVUzcF81bWghaDVYPzdKWHJKVE5MYkA8QmdPZSNNWGltQEd0JUM1RUtGVD1zUnE9azgqKltPbmtUVWA4ImhgLkpYaDBxMUJULkJeW0BibWk9LHIsYSc1Y0g3NEkuNCpMTyVOLUFvcktsJDhyc11XVEFZMVQsaE0ocjQ6dXRoSmstUGo2WE4xKGptSG9CUFgqSkcpRSxnYkomJ3MiYTYlWDE3LipkZCtyJmhsVFBVNHM/SDtWM15TMFFcYylwc3UjWXQnTTY+TS9jcEFQMGkwUEwrfj5lbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCAxMAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDExMiAwMDAwMCBuIAowMDAwMDAwMjE5IDAwMDAwIG4gCjAwMDAwMDAzMzEgMDAwMDAgbiAKMDAwMDAwMDQxNCAwMDAwMCBuIAowMDAwMDAwNjE3IDAwMDAwIG4gCjAwMDAwMDA2ODUgMDAwMDAgbiAKMDAwMDAwMDk2NSAwMDAwMCBuIAowMDAwMDAxMDI0IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPGY0NDJkNWVmZDkyZDFhNzdlYWZiYzVjOTY5YmM2Y2UxPjxmNDQyZDVlZmQ5MmQxYTc3ZWFmYmM1Yzk2OWJjNmNlMT5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gNyAwIFIKL1Jvb3QgNiAwIFIKL1NpemUgMTAKPj4Kc3RhcnR4cmVmCjI5NDEKJSVFT0YK"),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);
+const bl=new Blob([u],{type:'application/pdf'});
+try{if(!d)throw 0;await d.save({filename:'Rohan_Gupta_Resume.pdf',data:bl})}catch(x){window.open(URL.createObjectURL(bl),'_blank')}})})();
+</script>
+</body>
+</html>
